@@ -1,12 +1,12 @@
 .register{
-    height: 100vh;
+    height: 90vh;
 }
 
-.header h2{
-    font-weight: 700;
-}
 
 .header p{
+    margin-top: 30px;
+    margin-bottom: 5px;
+    text-align: center;
     font-size: 14px;
     line-height: 21px;
     color: #737373;

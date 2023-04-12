@@ -16,13 +16,31 @@
     <link rel="stylesheet" href="css/login.css"/>
   </head>
   <body class="antialiased">
-    <section class="login d-flex">
+    @if ($errors->any())
+      <div class='pt-3'>
+          <div class='alert alert-danger'>
+              <ul>
+                  @foreach ($errors->all() as $item)
+                      <li>{{ $item }}</li>                
+                  @endforeach
+              </ul>
+          </div>
+      </div>
+    @endif
+    @if (Session::has('success'))
+    <div class="pt-3">
+      <div class="alert alert-success">
+        {{ Session::get('success') }}
+      </div>
+    </div> 
+    @endif
+    <section class="login">
       <!--Awal Login Left-->
-      <div class="login-left w-50 h-100">
+      <div class="login-left w-100 h-100">
         <div class="row justify-content-center align-items-center h-100">
-          <div class="col-md-6">
+          <div class="col-md-3">
             <div class="header">
-              <h2>Welcome to SunMovie!</h2>
+              <img src="image/logo3.jpg" alt="logo SUN-MOVIE">
               <p>Please enter your details.</p>
             </div>
             <form action="/login" method="POST">
@@ -44,8 +62,7 @@
                         class="form-control"
                         id="password"
                         placeholder="Enter your password"
-                    />
-                    <a href="#" class="text-center">Forgot password</a>
+                    />                    
                     <button class="sign-in" type="submit">Sign in</button>
                     <div class="text-center">
                         <span class="sign-up d-inline"
@@ -60,42 +77,6 @@
       </div>
       <!-- Akhir Login Left-->
 
-      <!--Awal Login Right-->
-      <div class="login-right w-50 h-100">
-        <div
-          id="carouselExampleAutoplaying"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="image/logo.jpg" class="d-block w-100" alt="..." />
-            </div>
-            <div class="carousel-item">
-              <img src="image/cover 1.png" class="d-block w-100" alt="..." />
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleAutoplaying"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-      <!-- Akhir Login Right-->
     </section>
 
     <script

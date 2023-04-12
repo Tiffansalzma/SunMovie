@@ -2,6 +2,7 @@
   <div class="w-1/3 pl-5">
     <a href="/movies" class="uppercase text-base mx-5 text-white hover:text-develobe-500 duration-200 font-inter">Movies</a>
     <a href="/tv-shows" class="uppercase text-base mx-5 text-white hover:text-develobe-500 duration-200 font-inter">TV Shows</a>
+    <a href="/ticket" class="uppercase text-base mx-5 text-white hover:text-develobe-500 duration-200 font-inter">Ticket</a>
   </div>
   <div class="w-1/3 flex items-center justify-center">
     <a href="/homepage" class="font-bold text-5xl font-quicksand text-white hover:text-develobe-500 duration-200">SunMovie</a>

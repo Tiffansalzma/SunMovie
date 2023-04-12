@@ -46,7 +46,7 @@
           </li>
         </ul>
       </div>
-</div>
+    </div>
     <!-- Akhir SideBar-->
 
     <div class="content">
@@ -54,48 +54,40 @@
         <table class="table shadow">
           <thead>
             <tr>
-              <th scope="col">Invoice ID</th>
-              <th scope="col">Acara ID</th>
-              <th scope="col">Nomor Rekening</th>
-              <th scope="col">Nomor Transaksi</th>
-              <th scope="col">Invoice</th>
-              <th scope="col">Verification</th>
-              <th scope="col">URL</th>
+              <th scope="col">Judul Film</th>
+              <th scope="col">Genre</th>
+              <th scope="col">Durasi</th>
+              <th scope="col">Bioskop</th>
+              <th scope="col">Banner</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">1272311201</th>
-              <td>Acara ID</td>
-              <td>Nomor Rekening</td>
-              <td>Nomor Transaksi</td>
+              <th scope="row">SUZUME</th>
+              <td>Animation</td>
+              <td>2 Jam 2 Menit</td>
+              <td>XXI,CGV,Cinepolis</td>
               <td>
-                <a href="#">
-                  <span class="badge bg-success">Send Invoice</span>
-                </a>
-              </td>
-              <td>
-                <span class="badge bg-danger">Not Verified</span>
-              </td>
-              <td>
-                <a href="#">Contoh URL</a>
+                <img src="image/film 3.jpg" class="card-img-top" width='10px' height='150px' alt="...">
               </td>
             </tr>
             <tr>
-              <th scope="row">1272311201</th>
-              <td>Acara ID</td>
-              <td>Nomor Rekening</td>
-              <td>Nomor Transaksi</td>
+              <th scope="row">JOHN WICK: CHAPTER 4</th>
+              <td>Action,Crime,Thriller</td>
+              <td>2 Jam 49 Menit</td>
+              <td>XXI,CGV,Cinepolis</td>
               <td>
-                <a href="#">
-                  <span class="badge bg-secondary">Send Invoice</span>
-                </a>
+                <img src="image/film 2.jpg" class="card-img-top" width='10px' height='150px' alt="...">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">THE SUPER MARIO BROS.MOVIE</th>
+              <td>Animation,Adventure,Comedy</td>
+              <td>1 Jam 32 Menit</td>
+              <td>XXI,CGV,Cinepolis</td>
               </td>
               <td>
-                <span class="badge bg-primary">Verified</span>
-              </td>
-              <td>
-                <a href="#">Contoh URL</a>
+                <img src="image/film 1.jpg" class="card-img-top" width='10px' height='150px' alt="...">
               </td>
             </tr>
           </tbody>

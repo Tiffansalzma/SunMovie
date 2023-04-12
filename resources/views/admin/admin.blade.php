@@ -11,156 +11,85 @@
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-
-  <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
-
-
-  <div class="page">
-
-    <!-- Awal SideBar-->
-    <div class="sidebar">
-      <div class="sidebar-header">
-        <div class="sidebar-admin-container">
-          <div class="admin-container">
-            <svg width="59" height="61" viewBox="0 0 59 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18.4375 16.5205C18.4375 22.8264 23.4009 27.958 29.5 27.958C35.5991 27.958 40.5625 22.8264 40.5625 16.5205C40.5625 10.2146 35.5991 5.08301 29.5 5.08301C23.4009 5.08301 18.4375 10.2146 18.4375 16.5205ZM49.1667 53.3747H51.625V50.833C51.625 41.0247 43.9034 33.0413 34.4167 33.0413H24.5833C15.0942 33.0413 7.375 41.0247 7.375 50.833V53.3747H49.1667Z" fill="#F8F8F8"/>
-            </svg>
-          </div>
-          <div class="admin-name">
-            <p class="admin">Admin</p>
-          </div>
+  @if (Session::has('success'))
+    <div class="pt-3">
+      <div class="alert alert-success">
+        {{ Session::get('success') }}
+      </div>
+    </div> 
+  @endif
+  <!-- Awal SideBar-->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/home-admin">Admin-SunMovie</a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pesanan</a>
+            </li>
+          </ul>
+          <a class="logout d-flex" href="/logout">logout</a>
         </div>
       </div>
+    </nav>
+  <!-- Akhir SideBar-->
 
-      <div class="sidebar-body">
-        <ul class="nav nav-list">
-          <li class="nav-item active">
-            <a href="/home-admin" class="nav-link text-center navigation-link">kelola</a>
-          </li>
-          <li class="nav-item">
-            <a href="/home-admin-pesanan" class="nav-link text-light text-center navigation-link">pesanan Customer</a>
-          </li>
-          <li class="nav-item">
-            <a href="/logout" class="nav-link text-light text-center navigation-link">Log Out</a>
-          </li>
-        </ul>
-      </div>
-</div>
-    <!-- Akhir SideBar-->
-
-    <div class="content">
-      <div class="container p-5">
-        <div class="row">
-          <div class="col">
-            <div class="card">
-              <img src="assets/wediing.jpg" class="card-img-top" alt="...">
-              <div class="card-footer bg-info text-center">
-                Bohemian
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card">
-              <img src="assets/wediing.jpg" class="card-img-top" alt="...">
-              <div class="card-footer bg-info text-center">
-                Islamic
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card">
-              <img src="assets/wediing.jpg" class="card-img-top" alt="...">
-              <div class="card-footer bg-info text-center">
-                Islamic
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-5 mb-5">
-          <div class="col">
-            <div class="card">
-              <img src="assets/wediing.jpg" class="card-img-top" alt="...">
-              <div class="card-footer bg-info text-center">
-                Rustic
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card">
-              <img src="assets/wediing.jpg" class="card-img-top" alt="...">
-              <div class="card-footer bg-info text-center">
-                Minimalis
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card">
-              <img src="assets/wediing.jpg" class="card-img-top" alt="...">
-              <div class="card-img-overlay text-center m-5">
-                <a href="tambah.html" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"">Tambah Template</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Tambah Template</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-                <label for="namaTemplate" class="form-label">Nama Template</label>
-                <input type="text" class="form-control" id="namaTemplate">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Jenis Template</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                        Long
-                    </label>
-                    </div>
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                        Short
-                    </label>
+    <!-- START DATA -->
+    <div class="my-3 p-3 bg-body rounded shadow-sm">
+                <!-- FORM PENCARIAN -->
+                <div class="pb-3">
+                  <form class="d-flex" action="{{ url('home-admin') }}" method="get">
+                      <input class="form-control me-1" type="search" name="katakunci" value="{{ Request::get('katakunci') }}" placeholder="Masukkan kata kunci" aria-label="Search">
+                      <button class="btn btn-secondary" type="submit">Cari</button>
+                  </form>
                 </div>
-            </div>
-            <div class="mb-3">
-              <label for="namaTemplate" class="form-label">Harga Template</label>
-              <input type="number" class="form-control" id="namaTemplate">
-            </div>
-            <div class="mb-3">
-                <label for="formFile" class="form-label">Insert Template</label>
-                <input class="form-control" type="file" id="formFile">
-              </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Simpan Template</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
+                
+                <!-- TOMBOL TAMBAH DATA -->
+                <div class="pb-3">
+                  <a href='{{ url("home-admin/create") }}' class="btn btn-primary">+ Tambah Data</a>
+                </div>
+          
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1">No</th>
+                            <th class="col-md-2">Judul Film</th>
+                            <th class="col-md-2">Genre</th>
+                            <th class="col-md-2">Durasi</th>
+                            <th class="col-md-2">Bioskop</th>
+                            <th class="col-md-2">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <?php $i = $data->firstItem()?>
+                      @foreach ( $data as $item )
+                      <tr>
+                            <td>{{ $i }}</td>
+                            <td>{{ $item->judul_film }}</td>
+                            <td>{{ $item->genre }}</td>
+                            <td>{{ $item->durasi }}</td>
+                            <td>{{ $item->bioskop }}</td>
+                            <td>
+                                <a href='{{ url("home-admin/".$item->judul_film."/edit") }}' class="btn btn-warning btn-sm">Edit</a>
+                                <form onsubmit="return confirm('Yakin akan menghapus data?')" class="d-inline" action="{{ url('home-admin/'.$item->judul_film) }}" method="post">
+                                  @csrf
+                                  @method('DELETE')
+                                  <button type="submit" name="submit" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            </td>
+                      </tr>
+                      <?php $i++?>
+                      @endforeach
+                        
+                    </tbody>
+                </table>
+                {{ $data -> links()}}
+               
+     </div>
+    <!-- AKHIR DATA -->
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>

@@ -1,12 +1,11 @@
 .login{
-    height: 100vh;
-}
-
-.header h2{
-    font-weight: 700;
+    height: 90vh;
 }
 
 .header p{
+    margin-top: 30px;
+    margin-bottom: 5px;
+    text-align: center;
     font-size: 14px;
     line-height: 21px;
     color: #737373;
@@ -28,12 +27,6 @@
     border-radius: 8px;
 }
 
-.login-form a{
-    text-decoration: none;
-    color: rgb(194, 45, 45);
-    margin: 20px 0;
-    display: block;
-}
 
 .login-form .sign-in{
     width: 100%;
@@ -42,6 +35,7 @@
     border-radius: 8px;
     color: white;
     font-weight: 600;
+    margin-top: 20px;
     margin-bottom: 20px;
     border: none;
 }
@@ -52,6 +46,7 @@
 }
 
 .login-form span a{
+    text-decoration: none;
     color: black;
     font-weight: 600;
 }

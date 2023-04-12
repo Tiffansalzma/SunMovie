@@ -6,7 +6,7 @@
     display: flex;
 } */
 
-.page .sidebar {
+.sidebar {
     height: 100vh;
     width: 308px;
     background-color: #516FEB;
@@ -15,7 +15,7 @@
     position: fixed;
 }
 
-.page .content {
+.content {
     height: 100vh;
     margin-left: 308px;
 }

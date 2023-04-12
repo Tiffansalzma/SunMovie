@@ -39,7 +39,7 @@ class SessionController extends Controller
         } else {
             //jika autentikasi gagal
             //return 'gagal';
-            return redirect('/')->with('message', 'The email and password entered are invalid ');
+            return redirect('/')->with('Warning', 'The email and password entered are invalid ');
         }
 
     }
@@ -47,7 +47,7 @@ class SessionController extends Controller
     function logout()
     {
         Auth::logout();
-        return redirect('/login');
+        return redirect()->to('/login')->with('success', 'Berhasil logout');
     }
 
     function register()
